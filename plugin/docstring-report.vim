@@ -30,6 +30,12 @@ endfor
 " can use the `getline` inbuilt to retrieve a specific line, in this case
 " retrieve line number, increment by one, perfom check with getline and `=~`
 " string comparison
+for occurance in s:def_occurance_line_numbers
+        let s:proceeding_line = occurance + 1
+        if getline(s:following_line) !~ '"""'
+                echo "Docstring does not exist for `def` declaration at line" occurance
+        endif
+endfor
 
 " Output all `def` declarations without docstrings
 
