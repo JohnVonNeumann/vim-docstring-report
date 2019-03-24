@@ -44,7 +44,7 @@ endfunction
 "   map ,c <Plug>DocstringReport
 " then the script will auto map the command to <Leader>d
 if !hasmapto('<Plug>DocstringReport')
-    map <unique> <Leader>d <Plug>DocstringReport
+    map <unique> <Leader>f <Plug>DocstringReport
 endif
 
 noremap <unique> <script> <Plug>DocstringReport <SID>docstring_report
