@@ -1,0 +1,25 @@
+*docstring-report.txt* Find function declarations and report whether they have docstrings written.
+
+Author: JohnVonNeumann
+License: Do what you want with it lol.
+
+INTRODUCTION                            *docstring-report*
+
+Functions/Methods without docstrings often may not tell the whole story, this
+Plugin helps programmers find functions without docs so they can fix them.
+
+MAPPINGS                                *docstring-report-mappings*
+
+Mappings work in all modes that the Author knows of, however, I am not a pro
+Vimscript author, so I could be wrong.
+
+<leader>f               Search the current file, and report back line numbers
+                        without docstrings.
+
+ABOUT                                   *docstring-report-about*
+
+Grab the latest version, report a bug or open a pull request at:
+
+https://github.com/JohnVonNeumann/vim-docstring-report
+
+ vim:tw=78:et:ft=help:norl:
