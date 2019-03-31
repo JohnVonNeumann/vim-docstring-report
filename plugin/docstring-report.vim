@@ -3,11 +3,6 @@
 " Version: 0.1
 " License: This file is placed in the public domain.
 
-" if exists("g:loaded_docstring_report")
-"         finish
-" endif
-" let g:loaded_docstring_report = 1
-
 " let s:blah scopes the var to our locally `:source`'d `script`
 " view `:help internal-variables for more info
 function s:docstring_report()
@@ -42,24 +37,15 @@ function s:docstring_report()
         endfor
 endfunction
 
-" call s:docstring_report()
-" Output all `def` declarations without docstrings
-
-" if the user doesn't map the plugin themselves with something like:
-"   map ,c <Plug>DocstringReport
-" then the script will auto map the command to <Leader>d
-noremap <unique> <script> <Plug>DocstringReport :call <SID>docstring_report()<CR>
-
-if !hasmapto('<Plug>DocstringReport')
-    map <unique> ,f <Plug>DocstringReport
-endif
-
 " <unique> outputs an err message if the mapping already exists or overlaps
 " with an existing plugin, view more info with `:help :map-<unique>
 " ----
 " <script
-" 
-" noremenu <script> Plugin.DocstringReport <SID>docstring_report()
-" 
-" noremap <SID>docstring_report() :call <SID>docstring_report()<CR>
+noremap <unique> <script> <Plug>DocstringReport :call <SID>docstring_report()<CR>
 
+" if the user doesn't map the plugin themselves with something like:
+"   map ,c <Plug>DocstringReport
+" then the script will auto map the command to <Leader>d
+if !hasmapto('<Plug>DocstringReport')
+    map <unique> ,f <Plug>DocstringReport
+endif
